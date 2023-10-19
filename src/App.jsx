@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Landing } from "./pages";
-import { AreaChart } from "./components";
+import { Landing, Error, Register, DashBoard } from "./pages";
 
 const App = () => {
   return (
