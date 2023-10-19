@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Landing } from "./pages";
 import { AreaChart } from "./components";
 
 const App = () => {
@@ -6,7 +7,7 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<AreaChart />} />
+          <Route path="/" element={<Landing />} />
         </Routes>
       </Router>
     </>
