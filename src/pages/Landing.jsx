@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
-    <main>
+    <Wrapper>
       <nav>
         <Logo />
       </nav>
@@ -28,7 +28,7 @@ const Landing = () => {
         </div>
         <img src={main} alt="main image" className="img main-img" />
       </div>
-    </main>
+    </Wrapper>
   );
 };
 const Wrapper = styled.main`

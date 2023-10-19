@@ -1,7 +1,18 @@
 import styled from "styled-components";
+import NotFound from "../assets/images/error.svg";
+import { Link } from "react-router-dom";
 
 const Error = () => {
-  return <Wrapper>Error</Wrapper>;
+  return (
+    <Wrapper className="full-page">
+      <div>
+        <img src={NotFound} alt="page not found" />
+        <h3>Oops!! Page not Found</h3>
+        <h5>Please Click on the Link Below to Go Back</h5>
+        <Link to="/">Back Home</Link>
+      </div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.main`
