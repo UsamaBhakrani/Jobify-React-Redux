@@ -6,7 +6,10 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<DashBoard />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </>

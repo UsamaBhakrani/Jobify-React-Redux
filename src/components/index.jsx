@@ -28,7 +28,6 @@ export {
   JobInfo,
   JobsContainer,
   Loading,
-  Logo,
   Navbar,
   NavLinks,
   PageBtnContainer,
@@ -36,4 +35,5 @@ export {
   SmallSidebar,
   StatItem,
   StatsContainer,
+  Logo,
 };

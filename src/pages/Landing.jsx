@@ -1,6 +1,7 @@
-import Logo from "../components";
+import Logo from "../components/Logo";
 import main from "../assets/images/main.svg";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -21,7 +22,9 @@ const Landing = () => {
             quia aliquid animi optio! Minima modi tempore excepturi. Commodi
             labore aliquam iure doloremque.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link className="btn btn-hero" to="/register">
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt="main image" className="img main-img" />
       </div>
