@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "../components/Logo";
 import { useState } from "react";
+import FormRow from "../components/FormRow";
 
 const initialState = {
   name: "",
@@ -17,44 +18,34 @@ const Register = () => {
     console.log(e.target.value);
   };
 
+  const handleChange = (e) => {
+    console.log(e.target);
+  };
+
   return (
     <Wrapper className="full-page">
       <form className="form" onSubmit={handleOnSubmit}>
         <Logo />
         <h3>Login</h3>
-        <div className="form-row">
-          <label htmlFor="name" className="form-label">
-            Name
-          </label>
-          <input
-            type="text"
-            value={values.name}
-            name="name"
-            className="form-input"
-          />
-        </div>
-        <div className="form-row">
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input
-            type="text"
-            value={values.email}
-            name="email"
-            className="form-input"
-          />
-        </div>
-        <div className="form-row">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            value={values.password}
-            name="password"
-            className="form-input"
-          />
-        </div>
+        <FormRow
+          name="name"
+          type="text"
+          value={values.name}
+          handleChange={handleChange}
+        />
+        <FormRow
+          name="email"
+          type="email"
+          value={values.email}
+          handleChange={handleChange}
+        />
+        <FormRow
+          name="password"
+          type="password"
+          value={values.password}
+          handleChange={handleChange}
+        />
+
         <button className="btn btn-block" type="submit">
           Submit
         </button>
