@@ -3,6 +3,8 @@ import Logo from "../components/Logo";
 import { useState } from "react";
 import FormRow from "../components/FormRow";
 import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser, registerUser } from "../features/user/userSlice";
 
 const initialState = {
   name: "",
@@ -13,6 +15,8 @@ const initialState = {
 
 const Register = () => {
   const [values, setValues] = useState(initialState);
+  const { isLoading, user } = useSelector((store) => store.user);
+  const dispatch = useDispatch();
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +25,10 @@ const Register = () => {
       toast.error("Please Provide All Values");
       return;
     }
+    if (isMember) {
+      dispatch(loginUser({ email, password }));
+    }
+    dispatch(registerUser({ name, email, password }));
   };
 
   const handleChange = (e) => {
